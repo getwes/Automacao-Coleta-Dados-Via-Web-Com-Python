@@ -8,4 +8,6 @@ import openpyxl
 
 #Acessar o site https://www.novaliderinformatica.com.br/computadores
 driver = webdriver.Chrome()
-driver.get()
+driver.get('https://www.novaliderinformatica.com.br/computadores')
+
+titulos = driver.find_elements(By.XPATH,"//a[@class='nome-produto']")
