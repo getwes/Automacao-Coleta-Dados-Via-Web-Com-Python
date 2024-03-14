@@ -13,8 +13,9 @@ driver.get('https://www.novaliderinformatica.com.br/computadores')
 #Coletando os nomes dos produtos
 titulos = driver.find_elements(By.XPATH,"//a[@class='nome-produto']")
 
-#
+#Coletando os preços dos produtos
+precos = driver.find_elements(By.XPATH,"//strong[@class='preco-promocional']")
 
-preco = driver.find_elements(By.XPATH,"//strong[@class='preco-promocional']")
-for valor in preco:
-    print(valor.text)
+# inserir os titulos e preços na planilha
+for titulo, precos in zip(titulos, precos):
+    pass
