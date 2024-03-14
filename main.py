@@ -10,4 +10,11 @@ import openpyxl
 driver = webdriver.Chrome()
 driver.get('https://www.novaliderinformatica.com.br/computadores')
 
+#Coletando os nomes dos produtos
 titulos = driver.find_elements(By.XPATH,"//a[@class='nome-produto']")
+
+#
+
+preco = driver.find_elements(By.XPATH,"//strong[@class='preco-promocional']")
+for valor in preco:
+    print(valor.text)
