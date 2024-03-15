@@ -24,7 +24,7 @@ workbook.create_sheet('produtos')
 sheet_produtos = workbook['produtos']
 sheet_produtos['A1'].value = 'produto'
 sheet_produtos['B1'].value = 'preço'
-# inserir os titulos e preços na planilha
+# inserir os titulos e preços na planilha ##zip para que se um titulo não tiver um preço não é atribuido
 for titulo, preco in zip(titulos, precos):
     sheet_produtos.append([titulo.text,preco.text])
 
